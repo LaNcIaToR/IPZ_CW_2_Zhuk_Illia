@@ -40,7 +40,10 @@ class MainActivity : ComponentActivity() {
         }
     }
 }
-
+enum class ScreenState {
+    SIGN_IN,
+    SIGN_IN_SUCCESS
+}
 @Composable
 fun SignInScreen() {
 
