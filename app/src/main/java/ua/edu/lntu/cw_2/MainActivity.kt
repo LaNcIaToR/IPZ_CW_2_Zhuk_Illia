@@ -57,7 +57,10 @@ fun SignInScreen() {
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
         when (screenState) {
-
+            ScreenState.SIGN_IN -> {
+            }
+            ScreenState.SIGN_IN_SUCCESS -> {
+            }
         }
     }
 }
