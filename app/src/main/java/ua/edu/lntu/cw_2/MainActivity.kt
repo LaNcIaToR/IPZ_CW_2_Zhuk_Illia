@@ -83,6 +83,18 @@ fun SignInScreen() {
                 }
             }
             ScreenState.SIGN_IN_SUCCESS -> {
+                Text("Sign In success")
+                Text("Email: ${email.text}")
+                Button(
+                    onClick = {
+                        email = TextFieldValue()
+                        password = TextFieldValue()
+                        screenState = ScreenState.SIGN_IN
+                    },
+                    modifier = Modifier.align(Alignment.End)
+                ) {
+                    Text("Sign Out")
+                }
             }
         }
     }
