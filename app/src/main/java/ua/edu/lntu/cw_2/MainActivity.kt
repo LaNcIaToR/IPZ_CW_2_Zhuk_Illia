@@ -58,6 +58,29 @@ fun SignInScreen() {
     ) {
         when (screenState) {
             ScreenState.SIGN_IN -> {
+                TextField(
+                    value = email,
+                    onValueChange = { email = it },
+                    label = { Text("Email") },
+                    modifier = Modifier.fillMaxWidth()
+                )
+                TextField(
+                    value = password,
+                    onValueChange = { password = it },
+                    label = { Text("Password") },
+                    visualTransformation = PasswordVisualTransformation(),
+                    modifier = Modifier.fillMaxWidth()
+                )
+                Button(
+                    onClick = {
+                        if (email.text.isNotEmpty() && password.text.isNotEmpty()) {
+                            screenState = ScreenState.SIGN_IN_SUCCESS
+                        }
+                    },
+                    modifier = Modifier.align(Alignment.End)
+                ) {
+                    Text("Sign In")
+                }
             }
             ScreenState.SIGN_IN_SUCCESS -> {
             }
