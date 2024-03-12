@@ -49,4 +49,13 @@ fun SignInScreen() {
     var email by remember { mutableStateOf(TextFieldValue()) }
     var password by remember { mutableStateOf(TextFieldValue()) }
     var screenState by remember { mutableStateOf(ScreenState.SIGN_IN) }
+
+    Column(
+        modifier = Modifier
+            .fillMaxSize()
+            .padding(16.dp),
+        verticalArrangement = Arrangement.spacedBy(16.dp)
+    ) {
+
+    }
 }
