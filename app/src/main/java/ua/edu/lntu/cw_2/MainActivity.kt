@@ -56,6 +56,8 @@ fun SignInScreen() {
             .padding(16.dp),
         verticalArrangement = Arrangement.spacedBy(16.dp)
     ) {
+        when (screenState) {
 
+        }
     }
 }
